@@ -1,1 +1,17 @@
-
+.box {
+	padding:200px;
+	border-style:solid;
+	border-color:#f88379;
+	background:#f88379;
+	text-align:center;
+	font-family: "Parkinsans", sans-serif;
+	font-weight:bold;
+	font-size:120px;
+	color:white
+}
+button {
+	font-size:50px;
+	border-radius:25px;
+	border:none;
+	background:#ffffff
+}
