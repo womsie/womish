@@ -6,6 +6,7 @@ async def route():
 
 from fastapi.responses import FileResponse
 
-@app.get("/")
+@app.get("/awa")
 async def route():
-  return FileResponse("")
+  return FileResponse("awa.html")
+  
