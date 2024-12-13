@@ -6,11 +6,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
+
 <div class="box">
 wwwwwwww
 <br>
 <button>🦑</button>
+<div class='time'><p id="time"></p></div>
 </div>
+
+<p id="squid"></p>
+<p id="time"></p>
+
+<script>
+let sq = 0;
+document.getElementById("squid").innerHTML = "You have" + " " + sq + " " + "squids";
+</script>
+
+<script>
+function time() {
+	const d = new Date().toLocaleString('en-US', {timeZone:'Europe/London'});
+	document.getElementById("time").innerHTML = "wom time:" + " " + d
+}
+setInterval(time, 250)
+</script>
 
 </body>
 </html>
