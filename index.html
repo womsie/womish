@@ -23,11 +23,21 @@ document.getElementById("squid").innerHTML = "You have" + " " + sq + " " + "squi
 
 <script>
 function time() {
-	const d = new Date().toLocaleString('en-US', {timeZone:'Europe/London'});
-	document.getElementById("time").innerHTML = "wom time:" + " " + d
+    const d = new Date().toLocaleString('en-GB', {
+        timeZone: 'Europe/London',
+        hour12: false,
+        day: 'numeric',
+        month: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric'
+    });
+    document.getElementById("time").innerHTML = "wom time:" + " " + d;
 }
-setInterval(time, 250)
+setInterval(time, 250);
 </script>
+
 
 </body>
 </html>
