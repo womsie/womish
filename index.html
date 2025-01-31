@@ -22,21 +22,37 @@ document.getElementById("squid").innerHTML = "You have" + " " + sq + " " + "squi
 </script>
 
 <script>
+function getOrdinalSuffix(day) {
+    if (day > 3 && day < 21) return 'th'; // teens
+    switch (day % 10) {
+        case 1: return "st";
+        case 2: return "nd";
+        case 3: return "rd";
+        default: return "th";
+    }
+}
+
 function time() {
-    const d = new Date().toLocaleString('en-GB', {
-        timeZone: 'Europe/London',
-        hour12: true,
-        day: 'numeric',
-        month: 'numeric',
-        year: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric'
-    });
-    document.getElementById("time").innerHTML = "wom time:" + " " + d;
+    const d = new Date();
+    const options = { timeZone: 'Europe/London', month: 'long' };
+    const month = new Intl.DateTimeFormat('en-GB', options).format(d);
+    const day = d.getDate();
+    const year = d.getFullYear();
+    const ordinalSuffix = getOrdinalSuffix(day);
+    const hour = d.getHours();
+    const minute = d.getMinutes();
+    const second = d.getSeconds();
+    const period = hour >= 12 ? 'PM' : 'AM';
+    const formattedHour = hour % 12 || 12; // Convert to 12-hour format
+    const formattedMinute = minute.toString().padStart(2, '0');
+    const formattedSecond = second.toString().padStart(2, '0');
+    const formattedDate = `${month} ${day}${ordinalSuffix} ${year} ${formattedHour}:${formattedMinute}:${formattedSecond} ${period}`;
+    
+    document.getElementById("time").innerHTML = "wom time: " + formattedDate;
 }
 setInterval(time, 250);
 </script>
+
 
 
 </body>
