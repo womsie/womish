@@ -45,8 +45,13 @@ h1 {
 .caption{
 	position:relative;
 	background-color:white;
+	overflow:auto;
 	width:100px;
 	height:50px;
 	transform:translate(0px, -50px);
 	opacity: 0.5;
+}
+
+sub {
+	font-size:10px
 }
