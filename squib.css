@@ -1,0 +1,52 @@
+body {
+	background-color:#ff99bb;
+	font-family: "Gothic A1", sans-serif;
+	font-weight:200
+}
+
+h1 { 
+		display: inline;
+		padding: 5px;
+		font-size: 60px;
+		color: white;
+		border-bottom:3px solid white
+}
+
+.silly {
+	animation::scroll-left 15s linear infinite;
+	overflow:hidden;
+	position: fixed;
+	transform:translate(0, 30px);
+	bottom: 0;
+	left: 0;
+	width:100%;
+}
+
+.balance {
+	transform: rotate(7deg);
+	
+}
+
+.box {
+	border:2px solid white;
+	width: 400px;
+	height: 400px;
+	margin:25px;
+	float:left;
+	margin:25px;
+}
+.image img{
+	object-fit:contain;
+	display:block;
+	width:400px;
+	height:400px;
+}
+
+.caption{
+	position:relative;
+	background-color:white;
+	width:100px;
+	height:50px;
+	transform:translate(0px, -50px);
+	opacity: 0.5;
+}
