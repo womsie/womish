@@ -26,8 +26,14 @@ button {
 	font-size:30px
 }
 
+.smaller {
+	font-size:30px;
+	display:inline;
+	float:right;
+}
+
 .silly {
-	animation:scroll-left 15s linear infinite;
+	animation::scroll-left 15s linear infinite;
 	overflow:hidden;
 	position: fixed;
 	transform:translate(0, 30px);
