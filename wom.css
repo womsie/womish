@@ -27,7 +27,7 @@ button {
 }
 
 .silly {
-	animation::scroll-left 15s linear infinite;
+	animation:scroll-left 15s linear infinite;
 	overflow:hidden;
 	position: fixed;
 	transform:translate(0, 30px);
