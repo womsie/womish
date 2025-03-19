@@ -1,10 +1,14 @@
+body {
+	font-family: "Gothic A1", sans-serif;
+	font-weight:200;
+}
+
 .box {
-	padding:200px;
+	padding:20px;
 	border-style:solid;
 	border-color:#d6B4fc;
 	background:#d6B4fc;
 	text-align:center;
-	font-family: "Parkinsans", sans-serif;
 	font-weight:bold;
 	font-size:120px;
 	color:white
@@ -20,4 +24,20 @@ button {
 }
 .small {
 	font-size:30px
+}
+
+.silly {
+	animation::scroll-left 15s linear infinite;
+	overflow:hidden;
+	position: fixed;
+	transform:translate(0, 30px);
+	bottom: 0;
+	left: 0;
+	width:100%;
+	z-index:10008;
+}
+
+.balance {
+	transform: rotate(7deg);
+	
 }
