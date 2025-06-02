@@ -47,14 +47,6 @@ function getOrdinalSuffix(day) {
 
 function time() {
     const d = new Date();
-    const options = {
-        timeZone: 'Europe/London',
-        month: 'long',
-        year: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-    };
     const day = d.toLocaleString('en-GB', { timeZone: 'Europe/London', day: 'numeric' });
     const ordinal = getOrdinalSuffix(Number(day));
     const month = d.toLocaleString('en-GB', { timeZone: 'Europe/London', month: 'long' });
@@ -63,6 +55,7 @@ function time() {
     let minute = d.toLocaleString('en-GB', { timeZone: 'Europe/London', minute: '2-digit' });
     let period = d.toLocaleString('en-GB', { timeZone: 'Europe/London', hour: 'numeric', hour12: true }).replace(/\d+/g, '').trim();
     hour = hour.replace(/AM|PM/i, '').trim();
+    minute = minute.padStart(2, '0');
     const formatted = `${day}${ordinal} ${month} ${year}, ${hour}:${minute}${period}`;
     document.getElementById("time").innerHTML = "wom time: " + formatted;
 }
