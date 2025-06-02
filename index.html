@@ -62,9 +62,6 @@ function time() {
     let hour = d.toLocaleString('en-GB', { timeZone: 'Europe/London', hour: 'numeric', hour12: true });
     let minute = d.toLocaleString('en-GB', { timeZone: 'Europe/London', minute: '2-digit' });
     let period = d.toLocaleString('en-GB', { timeZone: 'Europe/London', hour: 'numeric', hour12: true }).replace(/\d+/g, '').trim();
-    // Remove any leading zero from hour
-    hour = hour.replace(/^0/, '');
-    // Remove AM/PM from hour
     hour = hour.replace(/AM|PM/i, '').trim();
     const formatted = `${day}${ordinal} ${month} ${year}, ${hour}:${minute}${period}`;
     document.getElementById("time").innerHTML = "wom time: " + formatted;
