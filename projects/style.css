@@ -1,0 +1,95 @@
+body {
+    background: #d6B4fc;
+    font-family: Yusei Magic, sans-serif;
+}
+
+h1 {
+    text-align:center;
+    margin: auto;
+    color: white;
+}
+
+.silly {
+	animation::scroll-left 15s linear infinite;
+	overflow:hidden;
+	position: fixed;
+	transform:translate(0, 30px);
+	bottom: 0;
+	left: 0;
+	width:100%;
+	z-index:11;
+    pointer-events: none; 
+}
+
+.balance {
+    transform: rotate(7deg);
+	z-index: 10; 
+	pointer-events: auto;
+}
+
+.polka-dot-text {
+  font-size: 80px;
+  font-weight: bold;
+  color: transparent;
+  background:
+    radial-gradient(circle at 1px 1px, #fff 0.75px, transparent 1px),
+    #d6B4fc;
+  background-size: 3px 3px;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
+
+.center-box {
+  margin: 40px auto;
+  max-width: 600px;
+  text-align: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.center-box h2, h3, h4 {
+  text-align: left;
+  margin-left: 0;
+}
+
+.center-box p {
+  text-align: left;
+  margin-left: 0;
+  font-size: 20px;
+  color:white;
+}
+
+.center-box a {
+    color: transparent;
+    text-decoration: underline;
+    font: inherit;
+    border-bottom: none;
+    padding-bottom: 0;
+
+}
+
+sub {
+    font-size: 0.25em;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    color: white;
+    z-index: 10010;
+}
+
+
+.top-left {
+    font-size: 20px;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    color: white;
+    z-index: 10010;
+}
+
+
